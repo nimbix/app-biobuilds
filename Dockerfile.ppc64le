@@ -3,6 +3,7 @@ FROM nvidia/cuda-ppc64le:8.0-cudnn6-devel-ubuntu16.04
 # miniconda
 WORKDIR /tmp
 RUN wget https://repo.continuum.io/archive/Anaconda2-4.4.0.1-Linux-ppc64le.sh && bash ./*.sh -b -p /opt/anaconda2 && rm -f *.sh
+ENV PATH /opt/biobuilds/bin:/opt/anaconda2/bin:${PATH}
 
 # nimbix account setup
 RUN apt-get update && apt-get -y install curl && apt-get clean
