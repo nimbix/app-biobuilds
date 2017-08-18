@@ -17,7 +17,7 @@ ENV VERSION 2017.05
 RUN conda create -c biobuilds -y -p /opt/biobuilds biobuilds=2017.05 && conda clean --all -y
 
 # metadata
-COPY motd /etc/motd
+COPY 01-biobuilds-environment.sh /etc/profile.d/01-biobuilds-environment.sh
 COPY NAE/screenshot.png /etc/NAE/screenshot.png
 COPY NAE/AppDef.json /etc/NAE/AppDef.json
 RUN curl --fail -X POST -d @/etc/NAE/AppDef.json https://api.jarvice.com/jarvice/validate

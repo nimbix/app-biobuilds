@@ -22,7 +22,7 @@
             "path": "/bin/bash",
             "interactive": false,
             "name": "Batch",
-            "description": "Run a batch command using /bin/bash.  The output may be monitored directly in your web browser.",
+            "description": "Run a batch command using /bin/bash.  The output may be monitored directly in your web browser.  Batch commands run in the BioBuilds environment and have access to read and write persistent data to/from the /data directory.",
             "parameters": {
                 "-l": {
                     "name": "-l",
@@ -53,7 +53,7 @@
             "path": "/sbin/init",
             "interactive": true,
             "name": "Server",
-            "description": "Launch a session with all boot services, including SSH (if installed).  Connection address and credentials will appear in your web browser once available.",
+            "description": "Launch a session with the BioBuilds environment configured.  Use SSH to connect to the session once it boots.  Be sure to store any persistent data in the /data directory.",
             "parameters": {}
         }
     },
