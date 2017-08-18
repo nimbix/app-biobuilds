@@ -7,9 +7,9 @@ ENV PATH /opt/biobuilds/bin:/opt/anaconda2/bin:${PATH}
 RUN apt-get update && apt-get -y install curl && apt-get clean
 RUN curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/nimbix/image-common/master/install-nimbix.sh | bash
 
-# miniconda
+# Anaconda
 WORKDIR /tmp
-RUN curl -O https://repo.continuum.io/archive/Anaconda2-4.4.0.1-Linux-ppc64le.sh && bash ./*.sh -b -p /opt/anaconda2 && rm -f *.sh
+RUN curl -O https://repo.continuum.io/archive/Anaconda2-4.4.0.1-Linux-ppc64le.sh && bash ./*.sh -b -p /opt/anaconda2 && rm -f *.sh && conda update --prefix=/opt/anaconda2 -y anaconda
 
 # metadata
 COPY NAE/screenshot.png /etc/NAE/screenshot.png
