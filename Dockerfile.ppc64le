@@ -9,7 +9,7 @@ RUN curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/nimbix/i
 
 # Miniconda
 WORKDIR /tmp
-RUN curl -O https://repo.continuum.io/miniconda/Miniconda2-4.2.12-Linux-ppc64le.sh && bash ./*.sh -b -p /opt/miniconda2 && rm -f *.sh && conda update --prefix=/opt/miniconda2 -y conda
+RUN curl -O https://repo.continuum.io/miniconda/Miniconda2-4.2.12-Linux-ppc64le.sh && bash ./*.sh -b -p /opt/miniconda2 && rm -f *.sh && conda update --prefix=/opt/miniconda2 -y conda && conda clean --all -y
 
 # BioBuilds
 # Update VERSION for new versions
