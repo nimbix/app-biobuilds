@@ -8,7 +8,7 @@
         "IBM POWER/Bioinformatics"
     ],
     "machines": [
-        "np8c*",
+        "np8c[0-9]",
         "np8g*"
     ],
     "vault-types": [
